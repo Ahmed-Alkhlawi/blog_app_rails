@@ -1,15 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+<%= render "nav" %>
 
 
-<h1> All Articles </h1>
+<!--- Left section-->
+	<div class="row content">
+		<div class="col-xs-2 side">
+		<%= render "side" %>
+			</div>
+		</div>		
+		<!--- end section-->
 
-<ul id="articles">
-<% @articles.each do |f| %>
-	<li>
-	<%= link_to f.title, article_path(f), class: 'article_title' %>
-	</li>
+		<!--- Mid section-->
+		<div class="col-xs-8 middle">
+			<h1 class="text-capitalize"> latest news </h1>
+				<div class="table-responsive">
+				  <table class="table">
+				    <div class="panel panel-default">
+						<%= render "list_articles" %>
+					</div>
+				  </table>
+				</div>
+			
+		</div>
+		<!-- end section -->
 
-<%end%>
-	
-</ul>
 
-<%= link_to "Create New Article", new_article_path, class: "new_article_link" %>
+			<div class="col-xs-2 side"></div>		
+
+
+			<div class="row content">
+				<div class="col-xs-12 footer">
+					<ul>
+				</div>
+			</div>
+
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

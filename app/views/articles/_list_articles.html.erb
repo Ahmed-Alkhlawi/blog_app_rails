@@ -1,0 +1,16 @@
+
+			
+			<% @articles.each do |f| %>
+			<tr>
+			<td>
+				<div class="panel-body title">
+				<%= link_to f.title, article_path(f) %>
+				
+				</div>
+			</td>
+			</tr>
+
+			<%end%>
+		
+		
+	
